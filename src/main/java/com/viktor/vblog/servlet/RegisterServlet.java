@@ -1,6 +1,8 @@
 package com.viktor.vblog.servlet;
 
+import com.viktor.vblog.database.dao.RoleDAO;
 import com.viktor.vblog.database.dao.UserDAO;
+import com.viktor.vblog.database.entity.Role;
 import com.viktor.vblog.database.entity.User;
 
 import java.io.*;
@@ -25,10 +27,13 @@ public class RegisterServlet extends HttpServlet {
         user.setUsername(name);
         user.setPassword(password);
         user.setDisplayName(displayName);
-        user.setRoles(new HashSet(Collections.singletonList("author")));
+        RoleDAO roleDAO = new RoleDAO();
+        Role role= roleDAO.findByName("author");
         UserDAO userDAO= new UserDAO();
+        user.setRoles(new HashSet<>(Collections.singletonList(role)));
         userDAO.create(user);
-        response.sendRedirect("/login");
+        System.out.println("IDE GAS");
+        response.sendRedirect("/login.jsp");
     }
     public void destroy() {
     }

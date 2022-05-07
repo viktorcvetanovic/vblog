@@ -58,7 +58,7 @@
                     <a class="button is-primary" href="${pageContext.request.contextPath}/register.jsp">
                         <strong>Sign up</strong>
                     </a>
-                    <a class="button is-light">
+                    <a class="button is-light" href="${pageContext.request.contextPath}/login.jsp">
                         Log in
                     </a>
                 </div>

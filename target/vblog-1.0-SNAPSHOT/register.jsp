@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/register-servlet" method="post">
+<form action="register-servlet" method="post">
 <section class="section">
     <div class="columns">
         <div class="column is-4 is-offset-4">
