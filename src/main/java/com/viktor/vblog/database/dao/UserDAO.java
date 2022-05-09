@@ -20,7 +20,6 @@ public class UserDAO extends AbstractDAO<User> {
         super(User.class);
     }
 
-    @Transactional
     public User findByUsername(final String username) {
         final String QUERY = "select u from User u where u.username = :username";
         User user = null;
@@ -33,7 +32,7 @@ public class UserDAO extends AbstractDAO<User> {
             transaction.commit();
             session.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            return null;
         }
         return user;
     }

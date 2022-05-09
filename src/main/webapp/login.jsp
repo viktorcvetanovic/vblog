@@ -16,46 +16,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
 </head>
 <body>
-<section class="hero is-primary is-fullheight">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-5-tablet is-4-desktop is-3-widescreen">
-                    <form action="" class="box">
-                        <div class="field">
-                            <label  class="label">Email</label>
-                            <div class="control has-icons-left">
-                                <input type="email" placeholder="e.g. bobsmith@gmail.com" class="input" required>
-                                <span class="icon is-small is-left">
+
+<form action="login-servlet" method="post">
+    <section class="section">
+        <div class="columns">
+            <div class="column is-4 is-offset-4">
+                <form action="" class="box">
+                    <div class="field">
+                        <label class="label">Username</label>
+                        <div class="control has-icons-left">
+                            <input type="text" class="input" required name="username">
+                            <span class="icon is-small is-left">
                   <i class="fa fa-envelope"></i>
                 </span>
-                            </div>
                         </div>
-                        <div class="field">
-                            <label class="label">Password</label>
-                            <div class="control has-icons-left">
-                                <input type="password" placeholder="*******" class="input" required>
-                                <span class="icon is-small is-left">
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control has-icons-left">
+                            <input type="password" placeholder="*******" class="input" required name="password">
+                            <span class="icon is-small is-left">
                   <i class="fa fa-lock"></i>
                 </span>
-                            </div>
                         </div>
-                        <div class="field">
-                            <label class="checkbox">
-                                <input type="checkbox">
-                                Remember me
-                            </label>
-                        </div>
-                        <div class="field">
-                            <button class="button is-success">
-                                Login
-                            </button>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="field">
+                        <button class="button is-success" type="submit">
+                            Login
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</form>
 </body>
 </html>

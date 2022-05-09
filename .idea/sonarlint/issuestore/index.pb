@@ -7,3 +7,17 @@ g
 0src/main/java/com/viktor/vblog/util/UrlUtil.java,5\3\53493a9e1e1e99d0c001467860379a356e31792a
 `
 0src/main/java/com/viktor/vblog/util/SetUtil.java,f\5\f5ad7c102e39bc5d663b8d08510f651130e97dd4
+k
+;src/main/java/com/viktor/vblog/database/dao/CommentDAO.java,f\a\fad8475980ceecb76dbbb36d979fc7e5f8fcac83
+k
+;src/main/java/com/viktor/vblog/database/entity/Comment.java,7\f\7f690391564c5574df630146c5d53cfd14da69e5
+Q
+!src/main/webapp/fragment/post.jsp,0\e\0edc2f1e07095eef49c029e56461c28294bf36ea
+l
+<src/main/java/com/viktor/vblog/database/dao/AbstractDAO.java,d\7\d7f269bfb817b572fa6816a1cd4dd497308d1ffc
+f
+6src/main/java/com/viktor/vblog/util/HibernateUtil.java,2\3\23fd345ff10ddf05a687f1b57eb640ece8bcfe85
+h
+8src/main/java/com/viktor/vblog/database/entity/Role.java,6\6\66a0f56df682b742ef824297fc41261a15f21441
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

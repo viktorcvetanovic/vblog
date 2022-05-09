@@ -35,6 +35,5 @@ public class RegisterServlet extends HttpServlet {
         System.out.println("IDE GAS");
         response.sendRedirect("/login.jsp");
     }
-    public void destroy() {
-    }
+
 }

@@ -24,15 +24,11 @@
             <div class="field">
                 <label class="label">Username</label>
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input is-success" type="text" placeholder="Text input"  name="username">
+                    <input class="input" type="text" placeholder="Text input"  name="username">
                     <span class="icon is-small is-left">
                      <i class="fa fa-user"></i>
                      </span>
-                    <span class="icon is-small is-right">
-                     <i class="fa fa-check"></i>
-                     </span>
                 </div>
-                <p class="help is-success">This username is available</p>
             </div>
             <div class="field">
                 <label class="label">Password</label>
@@ -43,15 +39,11 @@
             <div class="field">
                 <label class="label">Email</label>
                 <div class="control has-icons-left has-icons-right">
-                    <input class="input is-danger" type="email" placeholder="Email input" value="name@" name="email">
+                    <input class="input " type="email" placeholder="Email input" name="email">
                     <span class="icon is-small is-left">
                      <i class="fa fa-envelope"></i>
                      </span>
-                    <span class="icon is-small is-right">
-                     <i class="fa fa-warning"></i>
-                     </span>
                 </div>
-                <p class="help is-danger">This email is invalid</p>
             </div>
             <div class="field">
                 <label class="label">Display name</label>
@@ -59,14 +51,7 @@
                     <input class="input" type="text" placeholder="Display name" name="displayName">
                 </div>
             </div>
-            <div class="field">
-                <div class="control">
-                    <label class="checkbox">
-                        <input type="checkbox">
-                        Slazem se sa <a href="#">uslovima koriscenja</a>
-                    </label>
-                </div>
-            </div>
+
             <div class="field is-grouped">
                 <div class="control">
                     <button class="button is-primary" type="submit">Submit</button>
