@@ -1,3 +1,6 @@
+<%@ page import="com.viktor.vblog.database.entity.Post" %>
+<%@ page import="com.viktor.vblog.database.dao.PostDAO" %>
+<%@ page import="java.util.List" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -17,7 +20,18 @@
         </p>
     </div>
 </section>
-<jsp:include page="fragment/post.jsp"/>
+<%
+    List<Post> posts = new PostDAO().findAll();
+    System.out.println(posts);
+    request.setAttribute("posts", posts);
+%>
+
+<c:forEach items="${posts}" var="post">
+    <jsp:include page="fragment/post.jsp">
+        <jsp:param name="post_id" value="${post.idPost}"/>
+    </jsp:include>
+</c:forEach>
+
 <jsp:include page="include/footer.jsp"/>
 </body>
 </html>
