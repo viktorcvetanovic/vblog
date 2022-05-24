@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
 </head>
 <body>
+<jsp:include page="include/nav.jsp"/>
 <form action="post-servlet" method="post">
     <section class="section">
         <div class="columns">
@@ -47,5 +48,7 @@
         </div>
     </section>
 </form>
+
+<jsp:include page="include/footer.jsp"/>
 </body>
 </html>
