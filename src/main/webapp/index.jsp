@@ -17,7 +17,7 @@
         </p>
     </div>
 </section>
-<jsp:include page="fragment/post.jsp"/>
+<jsp:include page="include/show_posts.jsp"/>
 <jsp:include page="include/footer.jsp"/>
 </body>
 </html>
