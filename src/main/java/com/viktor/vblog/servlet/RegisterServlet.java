@@ -32,7 +32,6 @@ public class RegisterServlet extends HttpServlet {
         UserDAO userDAO= new UserDAO();
         user.setRoles(new HashSet<>(Collections.singletonList(role)));
         userDAO.create(user);
-        System.out.println("IDE GAS");
         response.sendRedirect("/login.jsp");
     }
 

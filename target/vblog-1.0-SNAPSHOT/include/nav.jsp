@@ -9,7 +9,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="https://bulma.io">
-            <img src="https://www.nicepng.com/png/full/232-2326770_icon-blogger-logo-now-creative-group-logo.png" >
+            <img src="https://www.nicepng.com/png/full/232-2326770_icon-blogger-logo-now-creative-group-logo.png">
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -31,16 +31,39 @@
         </div>
     </div>
 
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="buttons">
-                    <a class="button is-primary" href="${pageContext.request.contextPath}/register.jsp">
-                        <strong>Sign up</strong>
-                    </a>
-                    <a class="button is-light" href="${pageContext.request.contextPath}/login.jsp">
-                        Log in
-                    </a>
-                </div>
+    <div class="navbar-end">
+        <%
+            //HERE WE GETTING THE ATTRIBUTE DECLARED IN VALIDATE.JSP AND CHECKING IF IT IS NULL, THE USER WILL BE REDIRECTED TO LOGIN PAGE
+            String uid = (String) session.getAttribute("user");
+            if (uid == null) {
+
+
+        %>
+        <div class="navbar-item">
+            <div class="buttons">
+                <a class="button is-primary" href="${pageContext.request.contextPath}/register.jsp">
+                    <strong>Sign up</strong>
+                </a>
+                <a class="button is-light" href="${pageContext.request.contextPath}/login.jsp">
+                    Log in
+                </a>
             </div>
         </div>
+    </div>
+    <%
+        }
+            else {
+    %>
+    <div class="navbar-item">
+        <div>
+            <a class="button is-light" href="${pageContext.request.contextPath}/include/logout.jsp" >
+                Logout
+            </a>
+        </div>
+    </div>
+    </div>
+    <%
+        }
+    %>
+
 </nav>

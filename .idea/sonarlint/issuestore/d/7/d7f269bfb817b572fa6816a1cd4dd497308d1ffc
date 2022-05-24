@@ -1,15 +1,0 @@
-
-V
-java:S5993"9Change the visibility of this constructor to "protected".(£ß‚8Šë‹í‰0
-b
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µ¥Ìî8ë‹í‰0
-„
-java:S4087"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ËÇÇÓûÿÿÿÿ8ÚÍŒí‰0
-„
-java:S4087+"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ËÇÇÓûÿÿÿÿ8ŞÍŒí‰0
-„
-java:S4087<"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ËÇÇÓûÿÿÿÿ8áÍŒí‰0
-„
-java:S4087R"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ËÇÇÓûÿÿÿÿ8æÍŒí‰0
-„
-java:S4087c"bRemove this "close" call; closing the resource is handled automatically by the try-with-resources.(ËÇÇÓûÿÿÿÿ8êÍŒí‰0

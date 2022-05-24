@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Collections;
+import java.util.List;
 
 @WebServlet(name = "postServlet", value = "/post-servlet")
 public class PostServlet extends HttpServlet {
@@ -23,8 +26,24 @@ public class PostServlet extends HttpServlet {
         post.setTitle(title);
         post.setExcerpt(excerpt);
         post.setBody(body);
+        post.setSlug("/create-post");
+        post.setPublished(false);
+        post.setDatePosted(LocalDate.now());
         postDAO.create(post);
         resp.setStatus(302);
         resp.sendRedirect("/index.jsp");
+    }
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        PostDAO postDAO = new PostDAO();
+        List<Post> postList = postDAO.findAll();
+        if(req.getParameter("id") != null) {
+            int id = Integer.parseInt(req.getParameter("id"));
+            Post post = postDAO.find(id);
+            postList= Collections.singletonList(post);
+        }
+
+        req.setAttribute("postList", postList);
     }
 }

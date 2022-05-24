@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
         User user = userDAO.findByUsername(username);
         if (user != null) {
             if (user.getPassword().equals(password)) {
-                request.getSession().setAttribute("user", user);
+                request.getSession().setAttribute("user", username);
                 response.setStatus(302);
                 response.sendRedirect("/index.jsp");
                 return;
