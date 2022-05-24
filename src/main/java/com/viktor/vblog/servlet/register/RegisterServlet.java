@@ -1,4 +1,4 @@
-package com.viktor.vblog.servlet;
+package com.viktor.vblog.servlet.register;
 
 import com.viktor.vblog.database.dao.RoleDAO;
 import com.viktor.vblog.database.dao.UserDAO;

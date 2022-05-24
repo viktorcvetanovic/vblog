@@ -5,20 +5,18 @@
 <%
     System.out.println("IDE GAS");
     System.out.println(request.getParameter("post_id"));
-    if(request.getParameter("post_id") == null || request.getParameter("post_id").equals("")){
+    if (request.getParameter("post_id") == null || request.getParameter("post_id").equals("")) {
         return;
     }
-    Integer post_id = Integer.valueOf(request.getParameter("post_id"));
+    Long post_id = Long.valueOf(request.getParameter("post_id"));
     Post post = new PostDAO().find(post_id);
     User user = post.getIdUser();
     request.setAttribute("post", post);
     request.setAttribute("user", user);
-    request.setAttribute("post", post);
-    request.setAttribute("user", user);
+    request.setAttribute("logged_user", request.getSession().getAttribute("user"));
 
 
 %>
-
 <article class="media">
     <figure class="media-left">
         <p class="image is-64x64">
@@ -28,7 +26,9 @@
     <div class="media-content">
         <div class="content">
             <p>
-                <strong>${user.displayName}</strong> <small>${user.email}</small> <small>31m</small>
+                <strong>${user.displayName}</strong> <small>${user.email}</small> <small>${post.datePosted}</small>
+                <br>
+                ${post.title}
                 <br>
                 ${post.body}
             </p>
@@ -47,7 +47,18 @@
             </div>
         </nav>
     </div>
-    <div class="media-right">
-        <button class="delete"></button>
+    <%
+        if (request.getSession().getAttribute("user") != null) {
+            if (request.getSession().getAttribute("user").equals(user.getUsername())) {
+    %>
+    <div class="media-right" >
+        <form action="post/delete" method="post">
+            <input type="hidden" name="post_id" value="${post.idPost}">
+            <button class="delete" type="submit"></button>
+        </form>
     </div>
+    <%
+            }
+        }
+    %>
 </article>
