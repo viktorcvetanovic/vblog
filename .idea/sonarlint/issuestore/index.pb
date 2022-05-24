@@ -15,10 +15,6 @@ f
 6src/main/java/com/viktor/vblog/util/HibernateUtil.java,2\3\23fd345ff10ddf05a687f1b57eb640ece8bcfe85
 h
 8src/main/java/com/viktor/vblog/database/entity/Role.java,6\6\66a0f56df682b742ef824297fc41261a15f21441
-L
-src/main/webapp/register.jsp,b\d\bde35d3876092f82f8efadc1a6675aaf6bd96946
-I
-src/main/webapp/login.jsp,8\5\85ee523d01e5e19376db640e846c91bbcb0a1c22
 h
 8src/main/java/com/viktor/vblog/servlet/LoginServlet.java,a\7\a71e27037e4d37b0324fab61e26fb283b4fff288
 h

@@ -56,9 +56,10 @@
     %>
     <div class="navbar-item">
         <div>
-            <a class="button is-light" href="${pageContext.request.contextPath}/include/logout.jsp" >
-                Logout
-            </a>
+            <form method="post" action="logout">
+                <button class="button is-primary" type="submit">
+                    Logout
+                </button>
         </div>
     </div>
     </div>
