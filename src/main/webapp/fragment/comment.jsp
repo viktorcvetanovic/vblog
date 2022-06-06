@@ -22,12 +22,8 @@ if (request.getParameter("comment_id") == null || request.getParameter("comment_
 
 
 
-<article class="media" >
-    <figure class="media-left">
-        <p class="image is-64x64">
-            <img src="https://bulma.io/images/placeholders/128x128.png">
-        </p>
-    </figure>
+<article class="media"  style="margin-left: 5rem">
+
     <div class="media-content">
         <div class="content">
             <p>

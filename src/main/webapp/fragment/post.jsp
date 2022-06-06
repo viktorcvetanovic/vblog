@@ -84,11 +84,11 @@
 
 
 <form action="comment" method="post">
-    <article class="media" style="margin-bottom: 3rem">
+    <article class="media" style="margin-bottom: 3rem;margin-left: 5rem">
     <div class="media-content">
         <div class="field">
             <p class="control">
-                <textarea class="textarea" placeholder="Add a comment..." cols="4"  name="comment"></textarea>
+                <textarea class="textarea" placeholder="Add a comment..." cols="4"  name="comment" style="max-width: 500px !important; min-width: 500px !important;"></textarea>
             </p>
         </div>
         <input hidden name="post_id" value="${post.idPost}">
