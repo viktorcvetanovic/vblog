@@ -63,7 +63,8 @@
     </div>
 </section>
 </form>
-
+<div style="margin-top: 18rem">
 <jsp:include page="include/footer.jsp"/>
+</div>
 </body>
 </html>
